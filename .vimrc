@@ -19,9 +19,20 @@ set cursorline " highlight current line
 filetype indent on " load filetype specific indent files
 set wildmenu " visual autocomplete for command menu
 " set lazyredraw
-set showmatch " highlight matching [{}]
-set laststatus=2 " display the status line always
-set statusline=%f\ -\ FileType:\ %y " set the status line
+set showmatch      " highlight matching [{}]
+set laststatus=2   " display the status line always
+set statusline=%f  " Path to file
+set statusline+=\  " add a space
+set statusline+=%y
+set statusline+=%= " Switch to the right
+set statusline+=%l " Current line
+set statusline+=/  " Separator
+set statusline+=%L " Total lines   
+set statusline+=\ " 
+set statusline+=%c
+" \ -\ FileType:\ %y " set the status line
+set colorcolumn=80
+
 
 " searching
 set incsearch " search as characters are entered
